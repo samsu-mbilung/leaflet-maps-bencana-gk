@@ -914,13 +914,10 @@ $(window).on('load', function() {
      credit += ' | ';
      }
 
-      /** 
-       * disable to view code source in bottom-right
      credit += 'View <a href="' + getSetting('_githubRepo') + '">code</a>';
-        if (getSetting('_codeCredit')) credit += ' by ' + getSetting('_codeCredit');
-    credit += ' with ';
-     */
-    $('.leaflet-control-attribution')[0].innerHTML = name + url + attributionHTML;
+     if (getSetting('_codeCredit')) credit += ' by ' + getSetting('_codeCredit');
+     credit += ' with ';
+    $('.leaflet-control-attribution')[0].innerHTML = credit + attributionHTML;
   }
 
 
